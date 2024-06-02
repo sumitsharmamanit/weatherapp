@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Data</h1>
+        <div class="button-container">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+    <label for="id_city_name">City Name:</label>
+    {{ form.name }}
+    {% if form.errors.name %}
+        <div class="error-message">
+            {% for error in form.errors.name %}
+                {{ error }}
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+
+                {% if request.GET.error %}
+                    <div class="error-message">
+                        {{ request.GET.error }}
+                    </div>
+                {% endif %}
+                <button type="submit" class="add-city-button">Add City</button>
+            </form>
+            <form method="post" action="{% url 'reset_cities' %}">
+                {% csrf_token %}
+                <button type="submit" class="reset-cities-button">Reset Cities</button>
+            </form>
+        </div>
+        <div class="weather-cards">
+            {% for weather in weather_data %}
+                <div class="weather-card">
+                    <h2>{{ weather.city }}</h2>
+                    <p>Temperature: {{ weather.temperature }} °C</p>
+                    <p>Description: {{ weather.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

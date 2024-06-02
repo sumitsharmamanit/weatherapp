@@ -1,0 +1,79 @@
+body {
+    background-image: url('bg.jpg'); /* Replace 'path/to/your/image.jpg' with the path to your image */
+    background-position: center; /* Center the background image */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+    justify-content: flex-start; /* Align items at the top vertically */
+    padding-top: 20px; /* Add some space from the top */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Center align buttons horizontally */
+    margin-bottom: 20px;
+}
+
+.button-container form {
+    display: flex;
+    align-items: center;
+}
+
+.button-container form button {
+    margin-left: 10px;
+    background-color: #007bff; /* Blue color for buttons */
+    color: #fff; /* White text color for buttons */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add slight border radius */
+    padding: 8px 16px; /* Add padding to buttons */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.button-container form button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.button-container form input[type="text"] {
+    padding: 8px; /* Add padding to input text */
+    border-radius: 5px; /* Add slight border radius */
+    border: 1px solid #ccc; /* Add border with light gray color */
+    margin-right: 10px; /* Add margin to the right */
+}
+
+.weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align weather cards horizontally */
+    margin-top: 20px;
+}
+
+.weather-card {
+    width: 150px;
+    height: 150px; /* Set a fixed height for each card */
+    overflow: hidden; /* Hide overflow content */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.weather-card h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.weather-card p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.weather-card p.temperature {
+    font-weight: bold;
+}
