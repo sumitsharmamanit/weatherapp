@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository to your local machine:
 
 ```bash
-git clone [<repository-url>](https://github.com/sumitsharmamanit/weatherapp.git)
+git clone https://github.com/sumitsharmamanit/weatherapp.git
 ```
 
 
