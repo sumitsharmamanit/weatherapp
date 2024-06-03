@@ -19,18 +19,23 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository to your local machine:
 
-`git clone <repository-url>`
+```bash
+git clone [<repository-url>](https://github.com/sumitsharmamanit/weatherapp.git)
+```
 
 
 2. Navigate to the project directory:
 
-`cd weather_app`
+```bash
+cd weather_app
+```
 
 
 3. Install the required dependencies:
 
-`pip install -r requirements.txt`
-
+```bash
+pip install -r requirements.txt
+```
 
 ### Configuration
 
